@@ -1,0 +1,212 @@
+<?php
+
+/**
+ * Template Name: SINGLE PRODUCT PAGE TEMPLATE
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package copterpix
+ */
+get_header();
+
+
+
+$terms = get_the_category(get_the_ID());
+
+
+
+$args = array( 'category' => $terms[0]->term_id, 'post_type' =>  'products', 'exclude' => get_the_ID() ); 
+$product_list = get_posts( $args ); 
+?>
+<main id="primary" class="site-main single-product-page">
+    <section id="copterpix-pro-hero">
+        <div class="container-fluid g-0 hero-container" style="background-image: url('<?php echo get_field('hero_cover_image') ?>'); background-position: center; background-attachment: fixed;">                   
+            <div class="d-flex justify-content-between align-items-center h-100">                
+                <div class="hero-content">
+                    <h5><?php echo get_field('above_hero_title') ?></h5>
+                    <h2 style="font-weight: 500; font-size: 46px"><?php echo get_field('hero_title') ?></h2>
+                    <h4><?php echo get_field('hero_subtitle') ?></h4>
+                    <div class="my-3">
+                        <div class="sticker text-center">
+                            <p><?php echo get_field('hero_sticker') ?></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+                <div class="bg-decoration">
+                    <img src="<?php echo get_field('hero_decoration_image') ?>" alt="<?php echo get_field('hero_title') ?>" />
+                </div>
+            </div>
+            <div class="show_more text-center"><a href="#capabilities"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/circle_arrow_down.svg"  alt="show more" /></a></div>
+        </div>
+    </section>
+    <section id="capabilities" class="section-lg-space">
+        <div class="container" style="max-width: 900px">
+            <div class="row">
+                <h2 class="mb-5 text-center">Capabilities</h2>                
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-3 mb-lg-0">
+                    <div class="mb-3 mb-lg-0">
+                        <div class="cap-item-circle"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/takeoff.svg" alt="Takeoff" /></div>                    
+                        <div class="cap-title mt-3">Max takeoff:</div>
+                        <strong><?php echo get_field('max_takeoff') ?></strong>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12  text-center mb-3 mb-lg-0">
+                    <div class="mb-3 mb-lg-0">
+                        <div class="cap-item-circle"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/payload.svg" alt="Payload" /></div>                    
+                        <div class="cap-title mt-3">Max payload:</div>
+                        <strong><?php echo get_field('max_payload') ?></strong>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12  text-center">
+                    <div class="mb-3 mb-lg-0">
+                        <div class="cap-item-circle"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/flight-time.svg" alt="Flight Time" /></div>                    
+                        <div class="cap-title mt-3">Flight time:</div>
+                        <strong><?php echo get_field('flight_time') ?></strong>
+                    </div>
+                </div>                
+            </div>
+            
+        </div>
+    </section>
+    <section class="section-lg-space">
+        <div class="container-fluid p-0 position-relative">
+            <img src="<?php echo get_field('section_image') ?>" alt="demo" />
+            <div class="section-cover-img-demo">
+                <img src="<?php echo get_field('section_drone_background') ?>" alt="<?php echo get_field('hero_title') ?>" />
+            </div>
+        </div>
+    </section>
+    <div class="section-lg-space">
+        <div class="container" style="max-width: 1000px">
+            <div class="row text-center">
+                <h2><?php echo get_field('peripherals_title') ?></h2>
+                <p class="subtitle"><?php echo get_field('peripherals_subtitle') ?></p>
+            </div>
+            <?php if (have_rows('peripherals')) { 
+                $even = true;                
+                while (have_rows('peripherals')) : the_row();
+                    $class_name = $even ? 'peripheral-even' : 'peripheral-odd';
+            ?>
+                    <div class="row section-lg-space <?php echo $class_name ?>">
+                        <div class="col-lg-6 col-md-12 d-flex justify-content-center flex-column">                            
+                            <h4><?php echo get_sub_field('title') ?></h4>
+                            <div class="peripheral-content my-3">
+                                <?php echo get_sub_field('content') ?>
+                            </div>
+                        </div>    
+                        <div class="col-lg-6 col-md-12">
+                            <div class="peripheral-item-image">
+                                <img src="<?php echo get_sub_field('image') ?>" alt="peripheral" />
+                            </div>
+                        </div>    
+                    </div>
+            <?php $even = !$even; endwhile; } ?>
+        </div>        
+    </div>
+    <section class="section-lg-space">
+        <div class="container-fluid g-0">
+            <div class="row product-benefits-row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10 position-relative" style="background-image: url('<?php echo get_field('benefits_section_image') ?>'); border-top-left-radius: 150px; border-bottom-left-radius: 150px;background-size: cover">                                    
+                    <div class="container">
+                        <div class="row">                                                                        
+                            <div class="product-benefits d-flex align-items-start section-lg-padding" >
+                                <div class="content p-5 p-lg-0" style="max-width: 600px">
+                                    <?php $classes = ''; if (!get_field('benefit_color_dark')) $classes = 'text-white'; ?>
+                                    <h2 class="<?php echo $classes ?>">Benefits</h2>
+                                    <div class="<?php echo $classes ?>">
+                                        <?php echo get_field('peripherals_benefits') ?>                                        
+                                    </div>
+
+                                </div>
+                            </div>                                                                            
+                        </div>
+                    </div>
+                    <div class="drone-decoration-benefits">
+                        <img class="img-fluid" src="<?php echo get_field('benefits_background_drone') ?>" alt="benefits drone" style="max-width: 550px;" />
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </section>
+    <section class="section-lg-space">
+        <div class="container" style="max-width: 750px">
+            <div class="row">
+                <h2 class="text-center">Learn More</h2>                                
+            </div>
+            <div class="row section-lg-space">
+                <div class="col-lg-6 col">
+                    <div class="no-flip-card-container h-100">
+                        <div class="card d-flex h-100 justify-content-start">
+                            <div class="card-front d-flex flex-column justify-content-start">
+                                <div class="card-icon">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brochure.svg" alt="brochure" />
+                                </div>
+                                <h4 class="mt-4">Download full technical brochure</h4>
+                            </div>                                    
+                        </div>    
+                    </div>    
+                </div>
+                <div class="col-lg-6 col">
+                    <a href="/contact">
+                        <div class="no-flip-card-container h-100">
+                            <div class="card d-flex h-100 justify-content-start">
+                                <div class="card-front d-flex flex-column justify-content-start">
+                                    <div class="card-icon">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/send.svg" alt="brochure" />
+                                    </div>
+                                        <h4 class="mt-4">Get it touch</h4>
+                                </div>                                    
+                            </div>    
+                        </div>    
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-lg-space">
+        <div class="cp-bg cp-bg-80 section-lg-padding">
+            <div class="container related-products-container">
+                <h2 class="text-center">Related Products</h2>
+                <div class="row my-5">
+                    <?php 
+                    foreach ($product_list as $product){ 
+                        setup_postdata( $product ); ?>
+                    <div class="col col-lg-4">
+                        <div class="card card-small">
+                            <a href="<?php echo get_the_permalink($product->ID) ?>" style="color: inherit">
+                            <div class="product-img text-center"><?php echo get_the_post_thumbnail($product->ID) ?></div>
+                            <h4 class="mt-5"><?php echo get_the_title($product->ID) ?></h4>
+                            <div class="product-meta mt-2 w-100">
+                                <div class="d-flex align-items-center">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/takeoff_fill.svg" >
+                                    <p class="mb-0 ms-3">Max takeoff: <?php echo get_field('max_takeoff', $product->ID) ?></p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/payload_fill.svg" >
+                                    <p  class="mb-0 ms-3">Max payload: <?php echo get_field('max_payload', $product->ID) ?></p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/flight_time_fill.svg">
+                                    <p class="mb-0 ms-3">Flight time: <?php echo get_field('flight_time', $product->ID) ?></p>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <?php } wp_reset_postdata(); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main><!-- #main -->
+
+<?php
+get_footer();

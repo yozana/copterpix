@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto&display=swap');
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+
+/* ==== Global Style ==== */
+
+body {
+  overflow-x: hidden;
+}
+h1 {font-size: 60px; font-weight: 500}
+h2 {font-size: 46px; font-weight: 700; margin-bottom: 16px;}
+h3 {font-size: 38px; font-weight: 700;}
+h3.small {font-size: 32px; font-weight: 500}
+h4 {font-size: 28px; font-weight: 700}
+h5 {font-size: 22px; font-weight: 700; line-height: 1.4}
+ul li{list-style-position: outside; margin-left: 1em;}
+.subtitle {font-size: 22px; font-weight: 500}
+.custom-container {max-width: 1180px; margin-right: 0}
+.entry-content {
+  margin: 0;
+}
+.hover-dark:hover {background-color: #000; color: #fff;border: 1px solid #000;}
+.dark-container {background-color: #1B1C1D}
+.rounded-50 {border-radius: 50px;}
+.copterpix-container {
+  width: 1140px;
+  margin: auto !important;
+}
+.hero-container {height: 100vh; position: relative; border-bottom-left-radius: 150px; border-bottom-right-radius: 150px}
+.admin-bar .navbar.fixed-top {top: 32px;}
+.nav-link:focus {color: #fff }
+.navbar-nav li {margin-left: 0 !important;}
+#page {
+  overflow: hidden;
+}
+
+.page {
+  margin: 0;
+}
+
+.pt-scroll {
+  padding-top: 71px;
+}
+
+a {
+  text-decoration: none;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.navbar-toggler-icon {color: #DDA000}
+/*
+ul li {
+  list-style: none;
+}
+*/
+
+/* === Site Global CSS Start === */
+.entry-content {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+a {
+  color: #DDA000;
+}
+
+.entry-title a {
+    color: #000;
+}
+
+.entry-meta {
+  text-align: center;
+  color: white;
+}
+
+.entry-meta a {
+  color: #fdfcfc;
+}
+
+.wpml-ls-legacy-list-horizontal {
+  border: none;
+}
+
+/* === Site Global CSS End === */
+.nowrap {
+    white-space: nowrap;
+}
+.divider {border-bottom: 2px solid #f9f9f9}
+.section-lg-space {margin-top: 110px; margin-bottom: 110px;}
+.negative-section-lg-space {margin-top: -220px}
+.section-lg-padding {padding: 110px 0;}
+.section-title {padding-top: 30px;}
+section p {font-size: 18px;}
+.dark-link-color a, .dark-link-color a:visited {color: #212529}
+.dark-link-color a:hover {color: #fff}
+/* NAVBAR */
+.navbar {padding-top: 20px; padding-bottom: 20px;border-bottom: 1px solid; border-color: rgba(241, 241, 241, 0.5); background-color: transparent; -webkit-transition: background 1s; -moz-transition: background 1s;-o-transition: background 1s; transition: background 1s;}
+.blogs-page .navbar {background: #000;}
+li.nav-item {margin-right: 8px}
+.error404 .navbar {background-color: #000}
+.navbar-brand {padding-right: 70px}
+.btn { border-radius: 50px;}
+.btn-primary:hover{color: #fff;}
+.search-site {padding-right: 50px;}
+.nav-link:hover {color: #fff;}
+.navbar li a {color: #fff; font-weight: 500; font-size: 16px;}
+.mega-menu .dropdown-menu {left: 0} /* FOR JS HOVER */
+.mega-menu .product-item:hover {color: #DDA000}
+.mega-menu a.product-item  {color: #333}
+.navbar .dropdown-item {color: #1B1C1D; }
+.navbar .dropdown-item:hover {background-color: #DDA000; color: #fff; }
+.navbar.sticky {background-color: #000; transition: 1s}
+.hero-content {margin-left: 12%; color: #fff; max-width: 730px; z-index: 10}
+.subtitle-limited-width {max-width: 700px;}
+.category-img-box {box-shadow: 3px 10px 36px #00000012; padding: 10px;border-radius: 10px; width: 180px; height: 180px; margin: auto}
+/* HERO CAROUSEL, Home page */
+.carousel-caption {text-align: left; max-width: 800px; top: 270px; left: 10%;}
+.abs-drone {position: absolute; right: 2%; top: 50px; background-attachment: fixed; background-position: center;background-repeat: no-repeat;  background-size: cover; min-height: 500px}
+.carousel-indicators-numbers li {font-size: 26px; font-weight: 500; text-indent: 0 !important; height: 30px !important;color: #fff;background-color: transparent !important}
+.carousel-indicators {justify-content: flex-end; padding-right: 14%; margin-bottom: 5rem;}
+.carousel-indicators-numbers .carousel-control-next {right: calc(15% - 30px) !important; left: auto;}
+.carousel-indicators-numbers .carousel-control-prev {right: 15% !important; left: auto;}
+.carousel-item {max-height: 100vh;}
+.copterpix-hero-content .learn-more {font-weight: 500; color: #fff;}
+.why-content {font-size: 22px; text-align: center;}
+.cp-bg {background-color: #F9F9F9; width: 90%; border-top-right-radius: 150px; border-bottom-right-radius: 150px}
+.cp-bg-80 {width: 80%;}
+.cp-bg-special-padding {padding: 100px 0 600px 0;}
+.gray-bg {background-color: #F9F9F9}
+.details .btn-outline-light:hover {color: #333 !important}
+/* --- HOMEPAGE CARDS ---- */
+.card {padding: 50px; text-align: center; color: #1B1C1D; box-shadow: 3px 10px 36px #00000012; border: none; 
+-webkit-transition: -webkit-transform .5s; -moz-transition: -moz-transform 1.0s; -o-transition: -o-transform 1.0s; transition: transform 1.0s; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d;	position: relative; display: flex; justify-content: center; align-items: center;}
+.card-small {padding: 30px}
+.card-container {-webkit-perspective: 800px; -moz-perspective: 800px; -o-perspective: 800px; perspective: 800px; display: flex; flex-direction: column;}
+.card-container-product .card{min-height: 440px;}
+.card-icon {border-radius: 50%; overflow: hidden; width: 120px; height: 120px; margin: auto;}
+.card-icon img {padding: 30px; width: 121px; height: 121px; text-align: center; background-color: #1B1C1D;}
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{ -webkit-transform: rotateY( 180deg ); -moz-transform: rotateY( 180deg ); -o-transform: rotateY( 180deg ); transform: rotateY( 180deg );}
+.card-container.static:hover .card, .card-container.static.hover .card {-webkit-transform: none; -moz-transform: none;-o-transform: none; transform: none;}
+.card-container .card-front, .card-container .card-back {-webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden;}
+
+/* front pane, placed above back */
+.card-container .card-front {z-index: 2;}
+
+/* back, initially hidden pane */
+.card-container .card-back {-webkit-transform: rotateY( 180deg ); -moz-transform: rotateY( 180deg ); -o-transform: rotateY( 180deg ); transform: rotateY( 180deg ); z-index: 3; position: absolute; top: 0; left: 0; bottom: 0; background-color: #DDA000; }
+.card-back .flipped-bg {position: absolute; right: 0; bottom: 0; width: 156px;}
+.card-back .flipped-inner {color: #fff;z-index: 1}
+
+.cp-solutions-intro {margin-top: -500px;}
+.solutions-intro-container {display: flex; align-items: center; min-height: 850px; color: #fff;}
+
+.products-slider .product-item { margin-right: 25px; padding: 40px;  overflow: hidden; box-shadow: 3px 10px 36px #00000012;
+border-radius: 50px; border: none}
+.product-container {padding: 20px;}
+.products-slider .product-item img {max-width: auto; text-align: center; margin: auto; }
+.products-slider .product-title {margin-top: 100px; display: flex; justify-content: space-between; align-items: center; width: 100%}
+.products-slider .product-title a {color: #111111}
+.products-slider .product-title a:hover {color: #DDA000}
+.slick-dots {bottom: -70px}
+.slick-dots li button:before {font-size: 18px}
+.slick-dots li.slick-active button:before {color: #DDA000}
+.industries_title {padding-bottom: 100px; }
+.ind-name {font-weight: 700}
+.awards-item {width: 200px; margin: 0 30px}
+.form-bg {border-top-right-radius: 50px; border-bottom-right-radius: 50px}
+/*** COPTERPIX PRO PAGE **/
+.bg-decoration {margin-right: 10%;}
+.show_more {position: absolute; left: 0; bottom: 50px; width: 100%; text-align: center}
+.solution-icon {box-shadow: 3px 10px 36px #00000012; width: 165px; height: 165px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: auto;}
+.certification_icon {width: 205px; height: 205px; padding: 20px; border-radius: 50%; box-shadow: 3px 10px 36px #00000012; }
+.cap-item {padding: 0 0 0 30px; border-left: 3px solid #DDA000; margin: 50px 0}
+
+/***** DRONE IN A BOX *****/
+.video-background-holder {position: relative; background-color: black; height: 100vh; min-height: 25rem; width: 100%;  overflow: hidden;}
+.video-background-overlay {position: absolute; top: 0; left: 0; height: calc(100vh + 76px); width: 100%; background-color: black;
+  opacity: 0.5; z-index: 1;}
+.drone-in-a-box-page video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto;
+  z-index: 0; -ms-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%);  transform: translateX(-50%) translateY(-50%);
+}
+.videoContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+/*
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+*/
+}
+
+.videoContainer__video {
+  /* optional */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-background-content { position: relative; z-index: 2; }
+.incredible-benefits {min-height: 850px;}
+.drone-decoration-benefits {position: absolute; right: 10%; top: 15%;}
+.drone-in-a-decoration-benefits {position: absolute; left: 10%; top: 8%;}
+.intro-description ul li {font-size: 22px;}
+/******** COMPANY *********/
+.team-member-img {box-shadow: 0px 8px 40px #00000014; padding: 15px; }
+.btn-outline-dark:hover .collapsed .chevron-down, .btn-outline-dark:hover .chevron-up {-webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);}
+.chevron-up {transform: rotate(180deg);}
+.chevron-right {transform: rotate(270deg);}
+/********* SOLUTIONS ********/
+.negative-margin {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 100px;
+}
+.solutions-lg-card {margin: 15px; border-radius: 50px; box-shadow: 0px 10px 36px #00000029; padding: 80px 50px;background-color: #fff;}
+.absolute-after-bg {position: absolute; right: -250px; bottom: -80px}
+.dron-decoration {position: absolute; left: 0; top: 10px}
+.category-name {font-size: 28px;}
+
+/******* SOLUTION ************/
+.example-right-img {position: absolute; right: -200px; top: 40px;}
+.example-right-img img {width: 600px; border-radius: 50px}
+.example-slide ul {list-style-type: none;}
+.example-slide ul li:before{content: url('../images/check.svg'); margin-right: 15px}
+.example-slide ul li {line-height: 1.7}
+.examples-slider .slick-dots {bottom: 50px}
+
+/******* CLIENTS ************/
+.clients-contact {border-radius: 100px;}
+.clients-nagative-margin {margin-left: -10%;}
+.clients-section .contact {background: #f2f2f2; border-radius: 100px; padding: 0 50px; padding-left: 100px}
+
+/******* PRODUCT PAGE *********/
+.sticker {
+    width: 230px;
+    height: 230px;
+    border: 2px solid #DDA000;
+    background: #040608 0% 0% no-repeat padding-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 20px;    
+    position: relative;
+}
+.sticker:after {content: " "; position: absolute; z-index: -1; top: -15px; left: -15px; right: -15px; bottom: -15px; background: #040608 0% 0% no-repeat padding-box; border-radius: 50%;}
+.sticker p {font-size: 22px;}
+.cap-item-circle {box-shadow: 3px 10px 36px #00000012; border-radius: 50%; width: 165px; height: 165px; display: flex; align-items: center; justify-content: center; margin: auto}
+.peripheral-odd {flex-direction: row-reverse}
+.product-benefits-row {min-height: 900px;}
+.product-benefits ul li {line-height: 1.7; font-size: 22px}
+.peripheral-content ul {list-style-type: none;}
+.peripheral-content ul li {line-height: 2; }
+.peripheral-content ul li:before{content: url('../images/arrowBullet%20.svg'); margin-right: 30px; }
+.related-products-container {margin-left: 30%}
+.peripheral-item-image {border: 1px solid #70707047; border-radius: 20px; overflow: hidden;}
+.section-cover-img-demo {position: absolute; left: calc(50% - 400px); top: calc(50% - 219px)}
+/******* CONTACT FORM *******/
+input[type="text"], input[type="email"], input[type="area"] {
+    padding: 20px; 
+    border-color: #C4C4C4;
+    height: 50px;
+    border-radius: 5px;
+}
+input[type="submit"] {background-color: #DDA000; color: #fff; border-radius: 20px; font-size: 16px; padding: 14px 20px; border: none;}
+/* FOOTER */
+.copterpix-footer {background-color: #000;}
+.footer-title {font-size: 18px; font-weight: 700;}
+.copterpix-footer ul li a{font-size: 16px; line-height: 1.5; color: #fff; }
+.copterpix-footer-bottom {background-color: #1C1C1C}
+/* FOOTER CREDIT */
+.copterpix-credit-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #000;
+    font-size: 13px;
+    color: #dedede;
+    padding: 3px 0;
+}
+.copterpix-credit-bottom img {margin-left: 5px;}
+.copterpix-credit-bottom .credit-right {margin-left: 5px;}
+.copterpix-credit-bottom a {color: #6d6afb}
+.copterpix-footer ul li { line-height: 2rem; margin-left: 0 !important}
+
+/******* BLOGS / NEWS  ***********/
+.more-news-image {width: 120px; height: 120px;}
+.news-images-outer {height: 220px; width: 100%; }
+.news-images-outer img {width: 100%; height: 100%; border-radius: 35px;}
+
+/*********************************/
+
+@media only screen and (min-width: 1601px){
+    #product-demo-section {min-height: 100vh;}
+}
+@media only screen and (max-width: 1600px){
+    .related-products-container {margin-left: 20%;}
+}
+@media only screen and (max-width: 1400px){
+    h1 {font-size: 48px; font-weight: 500}
+    h2 {font-size: 42px; font-weight: 700; margin-bottom: 16px;}
+    h3 {font-size: 32px; font-weight: 700;}
+    h3.small {font-size: 28px; font-weight: 500}
+    h4 {font-size: 26px; font-weight: 700}
+    h5 {font-size: 22px; font-weight: 700; line-height: 1.4}
+    .carousel-item .carousel-caption {left: 8%; top: 250px}
+    .carousel-item .carousel-caption {max-width: 600px}
+    .abs-drone {text-align: right; top: 100px; min-height: auto;}
+    .abs-drone img {width: 70%; }
+    .navbar-brand {padding-right: 0}
+    li.nav-item {margin-right: 0;}
+    
+    
+}
+
+@media only screen and (max-width: 992px){
+    h1 {font-size: 42px; font-weight: 500}
+    h2 {font-size: 38px; font-weight: 700; margin-bottom: 16px;}
+    h3 {font-size: 28px; font-weight: 700;}
+    h3.small {font-size: 26px; font-weight: 500}
+    h4 {font-size: 24px; font-weight: 700}
+    h5 {font-size: 22px; font-weight: 700; line-height: 1.4}
+    .carousel-item .carousel-caption {left: 0; top: 250px}
+    .section-cover-img-demo {width: 70%;}
+    .search-site {padding-right: 0;}
+    .navbar {background-color: #000}
+    .related-products-container {margin-left: 5%;}
+    
+}
+
+@media only screen and (max-width: 768px){
+    
+    .fixed-top {position: static}
+    .negative-section-lg-space {margin-top: 55px}
+    .hero-container {border-bottom-left-radius: 50px; border-bottom-right-radius: 50px}
+    .section-lg-space {margin-top: 55px; margin-bottom: 55px;}    
+    .md-hf-padding {padding: 50px 0 !important}
+    .carousel-item {height: 70vh;}
+    .copterpix-hero-content h1 {font-size: 32px;}
+    .cp-bg {width: 100%;}
+    h2 {font-size: 32px;}
+    h3 {font-size: 28px;}
+    .navbar-brand img {max-width: 220px;}
+    .abs-drone {right: 0; top: 10px;}
+    .carousel-caption {width: 100%; padding: 30px; left: 0; top: 350px} 
+    .carousel-indicators {margin-bottom: 5%; justify-content: center;}
+    .solutions-intro-container {padding: 80px 15px;}
+    .products-slider .product-item {margin-right: 0}
+    .products-slider .product-title {margin-top: 0}
+    .industries_title {padding-bottom: 50px;}
+    .industry-container {max-width: auto;}
+    .dron-decoration {max-width: 50%; top: 0;}
+    .dron-decoration img{max-width: 100% !important;}
+    .absolute-after-bg {position: static}
+    .get-in-touch {padding-top: 0 !important}
+    .hero-content {margin: 30px; width: 100%;}
+    .bg-decoration {display: none;}
+    .cap-item {padding: 0 30px; margin: 50px;}
+    .cap-item:nth-of-type(n) {margin-bottom: 0}
+    .card {padding: 25px;}
+    .more-info-row {align-items: space-between}
+    .video-background-holder {height: 60vh;}
+    .video-background-content {margin: 0 !important}
+    .drone-decoration-benefits {bottom: 20px;  max-width: 350px;}
+    .drone-in-a-decoration-benefits {top: 50px;}
+    .clients-nagative-margin {margin-left: auto; margin-top: -30%}
+    .clients-section .contact {padding: 50px;}    
+    .credits {flex-direction: column}
+    .negative-margin {position: static; left: auto;}
+    .m-100 {width: 100% !important;}
+    .example-right-img {position: static;}
+    .industries-copterpix {margin-top: 110px}
+    .related-products-container {margin-left: 0}
+}

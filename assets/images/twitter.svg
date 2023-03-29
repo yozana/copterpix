@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Component_25_3" data-name="Component 25 – 3" width="33" height="34" viewBox="0 0 33 34">
+  <g id="Ellipse_126" data-name="Ellipse 126" fill="none" stroke="#111" stroke-width="1">
+    <ellipse cx="16.5" cy="17" rx="16.5" ry="17" stroke="none"></ellipse>
+    <ellipse cx="16.5" cy="17" rx="16" ry="16.5" fill="none"></ellipse>
+  </g>
+  <g id="Group_1032" data-name="Group 1032" transform="translate(10.326 11.487)">
+    <path id="Twitter_-_Original" data-name="Twitter - Original" d="M4.172,15.28a7.693,7.693,0,0,0,7.745-7.745c0-.118,0-.235-.008-.352a5.539,5.539,0,0,0,1.358-1.409A5.426,5.426,0,0,1,11.7,6.2,2.731,2.731,0,0,0,12.9,4.7a5.453,5.453,0,0,1-1.729.661A2.725,2.725,0,0,0,6.534,7.84,7.729,7.729,0,0,1,.923,5a2.724,2.724,0,0,0,.843,3.634A2.7,2.7,0,0,1,.531,8.289v.034a2.723,2.723,0,0,0,2.184,2.668,2.717,2.717,0,0,1-1.229.047,2.726,2.726,0,0,0,2.543,1.89A5.461,5.461,0,0,1,0,14.057a7.707,7.707,0,0,0,4.172,1.221" transform="translate(0 -4.499)" fill="#111" stroke="rgba(0,0,0,0)" stroke-width="1"></path>
+  </g>
+</svg>

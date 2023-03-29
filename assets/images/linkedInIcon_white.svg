@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Component_23_10" data-name="Component 23 – 10" width="35" height="34" viewBox="0 0 35 34">
+  <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M2.629,11.745H.194V3.9H2.629ZM1.41,2.834A1.417,1.417,0,1,1,2.82,1.411,1.422,1.422,0,0,1,1.41,2.834Zm10.332,8.91H9.312V7.928c0-.91-.018-2.076-1.266-2.076-1.266,0-1.46.988-1.46,2.011v3.882H4.154V3.9H6.489v1.07h.034a2.558,2.558,0,0,1,2.3-1.266c2.464,0,2.917,1.623,2.917,3.73v4.307Z" transform="translate(12.13 9.748)" fill="#fff"></path>
+  <g id="Ellipse_125" data-name="Ellipse 125" fill="none" stroke="#fff" stroke-width="1">
+    <ellipse cx="17.5" cy="17" rx="17.5" ry="17" stroke="none"></ellipse>
+    <ellipse cx="17.5" cy="17" rx="17" ry="16.5" fill="none"></ellipse>
+  </g>
+</svg>
