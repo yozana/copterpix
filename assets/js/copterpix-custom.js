@@ -173,9 +173,9 @@ jQuery(document).ready(function () {
     $('.clients-row').slick({
       dots: true,
       infinite: true,              
-      autoplaySpeed: 2000,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      autoplaySpeed: 3000,
+      slidesToShow: 5,
+      slidesToScroll: 1,
       touchThreshold: 1000,
       autoplay: true,
       responsive: [

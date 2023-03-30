@@ -109,7 +109,7 @@ get_header();
                     <img src="<?php echo get_field("about_us_image") ?>" />
                 </div>
                 <div class="col-lg-5 py-md-5">
-                    <h2 class="section-title about-title"><?php echo get_field("about_us_title") ?></h2>
+                    <h2 class="section-title about-title section-title-left"><?php echo get_field("about_us_title") ?></h2>
                     <p><?php echo get_field("about_us_content") ?></p>
                     <div class="btn btn-outline-dark "><a href="<?php echo get_field('about_us_link') ?>">Learn More</a></div>
                 </div>
@@ -120,7 +120,7 @@ get_header();
         <div class="cp-bg cp-bg-special-padding">
             <div class="container container-md" style="max-width: 768px;">
                 <div class="row text-center">
-                    <h2><?php echo get_field("why_copterpix_title") ?></h2>
+                    <h2 class="section-title-center"><?php echo get_field("why_copterpix_title") ?></h2>
                     <?php echo get_field("why_copterpix_content") ?>
                 </div>            
             </div>
@@ -183,7 +183,7 @@ get_header();
     <section class="products section-lg-space">
         <div class="container">
             <div class="row g-0">
-                <h2 class="text-center"><?php echo get_field('copterpix_solution_title') ?></h2>
+                <h2 class="text-center section-title-center"><?php echo get_field('copterpix_solution_title') ?></h2>
                 <?php
                 $args = array(
                   'post_type' => 'products',
@@ -241,7 +241,7 @@ get_header();
     <section class="clients section-lg-space">
         <div class="container">
             <div class="row g-0 section-lg-padding md-hf-padding">
-                <h2 class="text-center">Clients</h2>
+                <h2 class="text-center section-title-center">Clients</h2>
             </div>
             <div class="clients-row">
                 <?php if (have_rows('clients')) {
@@ -249,7 +249,7 @@ get_header();
                         <div class="client-item"><img class="m-auto" src="<?php echo get_sub_field('logo') ?>" /></div>
                 <?php endwhile;}  ?>            
             </div>
-            <div class="row text-center pt-5"><a class="btn btn-link" style="color: inherit" href="/clients" alt="Clients Page">View All</a></div>
+            <div class="row text-center pt-5"><a class="pt-5 show-more" href="/clients" alt="Clients Page">View All</a></div>
         </div>
     </section>
      <?php
@@ -258,7 +258,7 @@ get_header();
         <div class="cp-bg">
             <div class="container">
                 <div class="row section-lg-padding">   
-                    <h2 class="text-center industries_title"><?php echo get_field('industries_title') ?></h2>
+                    <h2 class="text-center industries_title section-title-center"><?php echo get_field('industries_title') ?></h2>
                     <?php    
                     while( have_rows('industries')) : the_row();
                     ?>   
@@ -284,13 +284,30 @@ get_header();
             <div class="img-container position-relative" style="max-width: 1130px;">
                 <img class="form-bg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/get-in-touch-bg.jpg" alt="form" /> <div class="dron-decoration"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home_drone_decoratated_contact.png" style="max-width: 500px" alt="decoration" /></div>
                 <div class="form-container solutions-lg-card absolute-after-bg" style="max-width: 550px;">
-                    <h2 class="text-center mb-5">Get In Touch</h2>
+                    <h2 class="text-center mb-5 section-title-center">Get In Touch</h2>
                     <?php echo do_shortcode('[contact-form-7 id="260" title="Short Vertical"]') ?>
                 </div>
             </div>
             
             
         </div>        
+    </section>
+    <section class="global-leaders-section section-lg-space">        
+        <div class="container">
+            <div class="row ">   
+                <h2 class="text-center section-title-center mb-5"><?php echo get_field('global_leaders_title') ?></h2>
+                
+                    <?php    
+                    while( have_rows('global_leaders')) : the_row();
+                    ?>   
+                    <div class="col-lg-2 col-md-3 col-sm-6 global-uav-item text-center">                    
+                        <img src="<?php echo get_sub_field('company_logo') ?>" alt="company_logo" class="rounded" />                                
+                    </div>
+
+                    <?php endwhile ?>
+                
+            </div>
+        </div>
     </section>
     
 </main><!-- #main -->

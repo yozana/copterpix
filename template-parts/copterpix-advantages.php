@@ -1,7 +1,7 @@
-<section id="advantages" class="section-lg-space">
+<section id="advantages" class="section-lg-space-top">
     <div class="container">
         <div class="row">
-            <h2 class="text-center"><?php echo get_field('copterpix_advantages_title', 'options') ?></h2>
+            <h2 class="text-center section-title-center"><?php echo get_field('copterpix_advantages_title', 'options') ?></h2>
             <h5 class="text-center"><?php echo get_field('copterpix_advantages_subtitle', 'options') ?></h5>
         </div>
         <?php

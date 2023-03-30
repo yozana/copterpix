@@ -99,9 +99,14 @@ a {
 }
 .divider {border-bottom: 2px solid #f9f9f9}
 .section-lg-space {margin-top: 110px; margin-bottom: 110px;}
+.section-lg-space-top {margin-top: 110px; padding-bottom: 110px;}
 .negative-section-lg-space {margin-top: -220px}
 .section-lg-padding {padding: 110px 0;}
 .section-title {padding-top: 30px;}
+.section-title-left:after {content: " "; display: block; width: 120px; height: 4px; background-color: #DDA000; margin: 16px 0;}
+.section-title-center:after {content: " "; display: block; width: 120px; height: 4px; background-color: #DDA000; margin: 16px auto;}
+.vertical-title-decoration {position: relative; padding-left: 30px;}
+.vertical-title-decoration:before {content: " "; display: block; width: 10px; height: 100%; background-color: #DDA000; position: absolute; left: 0;}
 section p {font-size: 18px;}
 .dark-link-color a, .dark-link-color a:visited {color: #212529}
 .dark-link-color a:hover {color: #fff}
@@ -121,6 +126,8 @@ li.nav-item {margin-right: 8px; line-height: 2;}
 .mega-menu .dropdown-menu {left: 0} /* FOR JS HOVER */
 .mega-menu .product-item:hover {color: #DDA000}
 .mega-menu a.product-item  {color: #fff}
+.show-more {color: #DDA000}
+.show-more:hover {color: #D4A237;}
 /*.navbar .dropdown-item {color: #1B1C1D; }*/
 .navbar .dropdown-item {color: #fff; }
 .navbar .dropdown-item:hover {background-color: #DDA000; color: #fff; }
@@ -188,7 +195,7 @@ border-radius: 50px; border: none}
 .solution-icon {box-shadow: 3px 10px 36px #00000012; width: 165px; height: 165px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: auto;}
 .certification_icon {width: 205px; height: 205px; padding: 20px; border-radius: 50%; box-shadow: 3px 10px 36px #00000012; }
 .cap-item {padding: 0 0 0 30px; border-left: 3px solid #DDA000; margin: 50px 0}
-
+.open-source-decoration {position: absolute; left: 0; bottom: 0;}
 /***** DRONE IN A BOX *****/
 .video-background-holder {position: relative; background-color: black; height: 100vh; min-height: 25rem; width: 100%;  overflow: hidden;}
 .video-background-overlay {position: absolute; top: 0; left: 0; height: calc(100vh + 76px); width: 100%; background-color: black;
@@ -228,6 +235,10 @@ border-radius: 50px; border: none}
 .drone-decoration-benefits {position: absolute; right: 10%; top: 15%;}
 .drone-in-a-decoration-benefits {position: absolute; left: 10%; top: 8%;}
 .intro-description ul li {font-size: 22px;}
+
+/******** COPTERPIX ADVANTAGES ***/
+#advantages { height: 100%; background: linear-gradient(180deg, #FFF 50%, #f9f9f9 50%) }
+
 /******** COMPANY *********/
 .team-member-img {box-shadow: 0px 8px 40px #00000014; padding: 15px; }
 .btn-outline-dark:hover .collapsed .chevron-down, .btn-outline-dark:hover .chevron-up {-webkit-filter: invert(100%); /* Safari/Chrome */
