@@ -32,7 +32,7 @@ $terms = get_categories(
 <!--                    <div class="mt-2 btn btn-outline-light"><a alt="learn more" style="color: inherit" href="<?php echo get_field('hero_link') ?>">Learn More</a></div>-->
                 </div> 
                 <div class="bg-decoration">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ere-95-pro-max.png" />
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/aps-300_decor.png" />
                 </div>
             </div>
             <div class="show_more text-center"><a href="#industries"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/circle_arrow_down.svg"  alt="show more" /></a></div>
@@ -40,7 +40,7 @@ $terms = get_categories(
     </section>
     <section id="industries" class="section-lg-space">
         <div class="container">
-            <h2 class="text-center"><?php echo get_field('served_industries_title') ?></h2>
+            <h2 class="text-center section-title-center"><?php echo get_field('served_industries_title') ?></h2>
             <p class="mt-2 m-auto text-center "><?php echo get_field('served_industries_subtitle') ?></p>
         </div>
         <div class="container my-5">
@@ -76,7 +76,7 @@ $terms = get_categories(
     <section class="section-lg-space">
         <div class="container">
             <div class="row">
-                <h2 class="text-center"><?php echo get_field('mix_match_title') ?></h2>
+                <h2 class="text-center section-title-center"><?php echo get_field('mix_match_title') ?></h2>
                 <div class="text-center m-auto">
                     <?php echo get_field('mix_match_subtitle') ?>                    
                 </div>
@@ -126,7 +126,7 @@ $terms = get_categories(
                             <div class="position-relative">
                                 <div style="font-size: 22px"><?php echo get_sub_field('step_name') ?></div>
                                 <div class="col col-content">
-                                    <h2><?php echo get_sub_field('example_title') ?></h2>
+                                    <h2 class="section-title-left"><?php echo get_sub_field('example_title') ?></h2>
                                     <p class="subtitle"><?php echo get_sub_field('example_subtitle') ?></p>
                                     <?php echo get_sub_field('example_content') ?>
                                     
@@ -146,7 +146,7 @@ $terms = get_categories(
     <section class="section-lg-space">
         <div class="container">
             <div class="row">
-                <h2>Additional benefits</h2>
+                <h2 class="section-title-left">Additional benefits</h2>
                 
                     <?php while (have_rows('additional_benefits')) : the_row() ;?>
                     <div class="col-lg-6 col-sm-12">
@@ -160,8 +160,49 @@ $terms = get_categories(
             </div>            
         </div>
     </section>
-    <?php } 
-    get_template_part('/template-parts/copterpix-advantages') ?>
+    <?php } ?>
+    
+        
+<!--    <?php get_template_part('/template-parts/copterpix-advantages')  ?>-->
+    
+    <section id="rounded-advantages" class="section-lg-space">
+        <div class="cp-bg">        
+            <div class="container section-lg-padding">
+                <div class="row">
+            <h2 class="text-center section-title-center"><?php echo get_field('copterpix_advantages_title', 'options') ?></h2>
+            <h5 class="text-center"><?php echo get_field('copterpix_advantages_subtitle', 'options') ?></h5>
+        </div>
+        <?php
+        if (have_rows('copterpix_advantages_cards', 'options')): ?>
+            <div class="row py-lg-5 g-4"> 
+            <?php    
+            while( have_rows('copterpix_advantages_cards', 'options')) : the_row();
+                    ?>                        
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card-container card-container-product">
+                        <div class="card">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <img src="<?php echo get_sub_field('advantage_icon') ?>" alt="<?php echo get_sub_field('card_label') ?>" />
+                                </div>
+                                <h4 class="mt-4"><?php echo get_sub_field('advantage_name') ?></h4>
+                            </div>    
+                            <div class="card-back card">
+                                <div class="flipped-inner">
+                                    <p class="flipped-description"><?php echo get_sub_field('advantage_description') ?></p>
+                                </div>
+                                <div class="flipped-bg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/flipbox_background.svg" /></div>
+                            </div>
+                        </div>    
+                    </div>    
+                </div>   
+                    <?php endwhile; ?>
+            </div>
+            <?php endif ?>
+            </div>
+        </div>    
+    </section>
+    
 </main><!-- #main -->
 
 <?php

@@ -37,7 +37,7 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col col-lg-9">
-                    <h2><?php echo get_field('about_title') ?></h2>                
+                    <h2 class="section-title-left"><?php echo get_field('about_title') ?></h2>                
                     <?php echo get_field('about_content') ?>
                     <div class="collapse" id="about_more" aria-controls="about_more">
                         <?php echo get_field('about_content_read_more_collapse_content') ?>
@@ -57,7 +57,7 @@ get_header();
     <section class="section-lg-space">
         <div class="container">
             <div class="row">
-                <h2 class="text-center">Leadership</h2>                                
+                <h2 class="text-center section-title-center">Leadership</h2>                                
             </div>
             <?php if (have_rows('leadership')) : ?>
             <div class="row my-5 g-4">
@@ -67,6 +67,7 @@ get_header();
             </div>
         </div>
     </section>
+<!--
     <section class="section-lg-space">
         <div class="container">
             <div class="row">
@@ -80,6 +81,7 @@ get_header();
             </div>
         </div>
     </section>
+-->
     <?php if (have_rows('awards', 'options')): 
         get_template_part('/template-parts/awards-section');
     endif ?>

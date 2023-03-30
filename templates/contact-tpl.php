@@ -31,7 +31,7 @@ get_header();
     <section id="form" class="section-lg-space">
         <div class="container">
             <div class="row">
-                <h2><?php echo get_field('form_title') ?></h2>            
+                <h2 class="section-title-left"><?php echo get_field('form_title') ?></h2>            
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-lg-7">

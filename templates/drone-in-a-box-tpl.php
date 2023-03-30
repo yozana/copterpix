@@ -48,7 +48,7 @@ get_header();
     <section class="section-lg-space">
         <div class="container">
             <div class="row">
-                <h2 class="text-center"><?php echo get_field('bvlos_game_changer_title') ?></h2>
+                <h2 class="text-center section-title-center"><?php echo get_field('bvlos_game_changer_title') ?></h2>
             </div>    
             <?php
             if (have_rows('bvlos_cards')): ?>
@@ -81,7 +81,7 @@ get_header();
         <div class="cp-bg">
             <div class="container section-lg-padding">
                 <div class="row">
-                    <h2 class="text-center"><?php echo get_field('drone_in_a_box_solution_title') ?></h2>                    
+                    <h2 class="text-center section-title-center"><?php echo get_field('drone_in_a_box_solution_title') ?></h2>                    
                 </div>
                 <?php if (have_rows('drone_in_a_box_cards')): ?>
                 <div class="row py-lg-5 p-3 g-4">
@@ -125,7 +125,7 @@ get_header();
     </section>
     <section class="section-lg-space">
         <div class="container">
-            <h2 class="text-dark"><?php echo get_field('incredible_benefits_title') ?></h2>
+            <h2 class="text-dark section-title-left"><?php echo get_field('incredible_benefits_title') ?></h2>
             <div class="intro-description">
             <?php echo get_field('incredible_benefits_description') ?>
                 <div class="btn btn-outline-dark my-3"><a style="color: inherit" href="/contact">Contact Us</a></div>
