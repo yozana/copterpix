@@ -61,7 +61,7 @@ get_header();
         <div class="cp-bg">        
             <div class="container section-lg-padding">
                 <h2 class="text-center section-title-center mb-lg-5"><?php echo get_field('copterpix_edge_title') ?></h2>
-                <div class="row p-lg-0 p-5 p-lg-0 g-5 px-xl-3 g-lg-0">
+                <div class="row p-5 p-lg-0 g-5 px-xl-3 g-lg-0">
                     <div class="col-lg-3 col-md-12">
                         <div class="mx-3 px-3-sm px-0-lg d-flex h-75">                            
                             <?php echo get_field('left_image_text') ?>
@@ -110,13 +110,13 @@ get_header();
             </div>            
         </div>
     </section>
-    <section id="CPX" class="section-lg-space">
+    <section id="CPX" class="section-lg-space" style="overflow: hidden">
         <div class="container section-lg-padding">
             <div class="row">
                 <h2 class="text-center section-title-center"><?php echo get_field('cpx_mission_title') ?></h2>
                 <p class="text-center subtitle"><?php echo get_field('cpx_mission_description') ?></p>
             </div>
-            <div class="row p-lg-0 p-5 p-lg-0 g-5 g-lg-0 section-lg-padding my-lg-5">
+            <div class="row p-5 p-lg-0 g-5 g-lg-0 section-lg-padding my-lg-5">
                 <div class="col-lg-3 col-md-12">
                     <div class="mx-3 px-3-sm px-0-lg d-flex h-75">
                         <?php echo get_field('cpx_left_image_text') ?>
@@ -151,7 +151,7 @@ get_header();
                             <p class="mt-2 subtitle"><?php echo get_sub_field('capability_description') ?></p>
                         </div>
                     </div>
-                    <?php endwhile; endif ?>
+                <?php endwhile; endif ?>
                 </div>
                 
             </div>

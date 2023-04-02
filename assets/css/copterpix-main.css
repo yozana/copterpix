@@ -37,9 +37,6 @@ ul li{list-style-position: outside; margin-left: 1em;}
 .admin-bar .navbar.fixed-top {top: 32px;}
 .nav-link:focus {color: #fff }
 .navbar-nav li {margin-left: 0 !important;}
-#page {
-  overflow: hidden;
-}
 
 .page {
   margin: 0;
@@ -99,8 +96,10 @@ a {
 }
 .divider {border-bottom: 2px solid #f9f9f9}
 .section-lg-space {margin-top: 110px; margin-bottom: 110px;}
+.double-lg-padding-top {padding-top: 220px}
 .section-lg-space-top {margin-top: 110px; padding-bottom: 110px;}
 .negative-section-lg-space {margin-top: -220px}
+.product-data-negative-section-lg-space {margin-top: -260px}
 .section-lg-padding {padding: 110px 0;}
 .section-title {padding-top: 30px;}
 .section-title-left:after {content: " "; display: block; width: 120px; height: 4px; background-color: #DDA000; margin: 16px 0;}
@@ -147,6 +146,8 @@ li.nav-item {margin-right: 8px; line-height: 2;}
 .copterpix-hero-content .learn-more {font-weight: 500; color: #fff;}
 .why-content {font-size: 22px; text-align: center;}
 .cp-bg {background-color: #F9F9F9; width: 90%; border-top-right-radius: 150px; border-bottom-right-radius: 150px}
+.cp-bg-right {background-color: #F9F9F9; width: 90%; border-top-left-radius: 150px; border-bottom-left-radius: 150px; margin-right: 0;}
+
 .cp-bg-80 {width: 80%;}
 .cp-bg-special-padding {padding: 100px 0 600px 0;}
 .gray-bg {background-color: #F9F9F9}
@@ -195,6 +196,7 @@ border-radius: 50px; border: none}
 .solution-icon {box-shadow: 3px 10px 36px #00000012; width: 165px; height: 165px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: auto;}
 .certification_icon {width: 205px; height: 205px; padding: 20px; border-radius: 50%; box-shadow: 3px 10px 36px #00000012; }
 .cap-item {padding: 0 0 0 30px; border-left: 3px solid #DDA000; margin: 50px 0}
+
 .open-source-decoration {position: absolute; left: 0; bottom: 0;}
 /***** DRONE IN A BOX *****/
 .video-background-holder {position: relative; background-color: black; height: 100vh; min-height: 25rem; width: 100%;  overflow: hidden;}
@@ -234,7 +236,10 @@ border-radius: 50px; border: none}
 .incredible-benefits {min-height: 850px;}
 .drone-decoration-benefits {position: absolute; right: 10%; top: 15%;}
 .drone-in-a-decoration-benefits {position: absolute; left: 10%; top: 8%;}
-.intro-description ul li {font-size: 22px;}
+.intro-description ul li {font-size: 22px; position: relative; margin-left: 0; padding-left: 30px}
+.intro-description  ul li::before {content: url('../images/list-item-icon.svg');display: inline-block; position: absolute; top: 3px; left: 0 }
+.intro-description ul {list-style-type: none;}
+
 
 /******** COPTERPIX ADVANTAGES ***/
 #advantages { height: 100%; background: linear-gradient(180deg, #FFF 50%, #f9f9f9 50%) }
@@ -285,16 +290,16 @@ border-radius: 50px; border: none}
 }
 .sticker:after {content: " "; position: absolute; z-index: -1; top: -15px; left: -15px; right: -15px; bottom: -15px; background: #040608 0% 0% no-repeat padding-box; border-radius: 50%;}
 .sticker p {font-size: 22px;}
-.cap-item-circle {box-shadow: 3px 10px 36px #00000012; border-radius: 50%; width: 165px; height: 165px; display: flex; align-items: center; justify-content: center; margin: auto}
-.peripheral-odd {flex-direction: row-reverse}
-.product-benefits-row {min-height: 900px;}
-.product-benefits ul li {line-height: 1.7; font-size: 22px}
-.peripheral-content ul {list-style-type: none;}
-.peripheral-content ul li {line-height: 2; }
-.peripheral-content ul li:before{content: url('../images/arrowBullet%20.svg'); margin-right: 30px; }
-.related-products-container {margin-left: 30%}
-.peripheral-item-image {border: 1px solid #70707047; border-radius: 20px; overflow: hidden;}
-.section-cover-img-demo {position: absolute; left: calc(50% - 400px); top: calc(50% - 219px)}
+.cap-item-circle {box-shadow: 3px 10px 36px #00000012; border-radius: 50%; width: 165px; height: 165px; display: flex; align-items: center; justify-content: center; margin: auto; background: #fff;}
+.table-data-img img{box-shadow: 3px 10px 36px #00000029;border-radius: 20px;}
+.antena-item {background: #fff; box-shadow: 3px 5px 18px #00000012; border-radius: 10px; width: 300px; margin: 20px;}
+#custom-drones ul li {font-size: 22px;list-style-image: url('../images/list-item-icon.svg'); line-height: 1.4; margin-bottom: 15px}
+#custom-drones ul { position: relative;}
+#accessories ul, #non-gps-navigation ul {list-style-type: none; list-style-position: outside;}
+#accessories ul li, #non-gps-navigation ul li {font-size: 22px;line-height: 1.5;  margin-left: 0; position: relative; padding-left: 30px; margin-bottom: 8px}
+#accessories ul li::before, #non-gps-navigation ul li:before {content: url('../images/list-item-icon.svg');display: inline-block; position: absolute; top: 3px; left: 0 }
+
+
 /******* CONTACT FORM *******/
 input[type="text"], input[type="email"], input[type="area"] {
     padding: 20px; 
@@ -303,6 +308,18 @@ input[type="text"], input[type="email"], input[type="area"] {
     border-radius: 5px;
 }
 input[type="submit"] {background-color: #DDA000; color: #fff; border-radius: 20px; font-size: 16px; padding: 14px 20px; border: none;}
+/******** CAMERAS **********/
+.camera-item {border-left: 3px solid #DDA000}
+#cameras .slick-dots li button:before {color: #7E7E7E; opacity: 1}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {color: #f9f9f9 !important}
+#cameras .slick-dots li.slick-active button:before {color: #DDA000}
+#cameras .slick-dots li {margin: 0 10px;}
+/*
+#cameras .slick-next:before {font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";}
+#cameras .slick-prev:before {font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053"; margin-right: 30px}
+*/
+
+
 /* FOOTER */
 .copterpix-footer {background-color: #000;}
 .footer-title {font-size: 18px; font-weight: 700;}
@@ -373,6 +390,8 @@ input[type="submit"] {background-color: #DDA000; color: #fff; border-radius: 20p
     .navbar {background-color: #000}
     .related-products-container {margin-left: 5%;}
     .example-right-img {position: static;}
+    .table-data-img {overflow: scroll;}
+    .table-data-img img {max-width: 1000px; overflow-x: scroll}
 }
 
 @media only screen and (max-width: 768px){
@@ -384,7 +403,8 @@ input[type="submit"] {background-color: #DDA000; color: #fff; border-radius: 20p
     .md-hf-padding {padding: 50px 0 !important}
     .carousel-item {height: 70vh;}
     .copterpix-hero-content h1 {font-size: 32px;}
-    .cp-bg {width: 100%;}
+    .cp-bg {width: 100%; overflow: hidden}
+    .cp-bg-right {width: 100%;}
     h2 {font-size: 32px;}
     h3 {font-size: 28px;}
     .navbar-brand img {max-width: 220px;}
@@ -402,7 +422,8 @@ input[type="submit"] {background-color: #DDA000; color: #fff; border-radius: 20p
     .get-in-touch {padding-top: 0 !important}
     .hero-content {margin: 30px; width: 100%;}
     .bg-decoration {display: none;}
-    .cap-item {padding: 0 30px; margin: 50px;}
+    .cap-item {padding: 0 30px; }
+/*    .cap-item {padding: 0 30px; margin: 50px;}*/
     .cap-item:nth-of-type(n) {margin-bottom: 0}
     .card {padding: 25px;}
     .more-info-row {align-items: space-between}
@@ -415,7 +436,11 @@ input[type="submit"] {background-color: #DDA000; color: #fff; border-radius: 20p
     .credits {flex-direction: column}
     .negative-margin {position: static; left: auto;}
     .m-100 {width: 100% !important;}
+    #cameras .slick-dots li {margin: 3px;}
+    .camera-item {border-left: 0px;}
+    #non-gps-navigation .section-lg-padding {padding: 55px 0}
     
     .industries-copterpix {margin-top: 110px}
     .related-products-container {margin-left: 0}
 }
+

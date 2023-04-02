@@ -19,7 +19,7 @@ get_header();
 
 ?>
 <main id="primary" class="site-main drone-in-a-box-page">
-    <section id="copterpix-pro-hero" class="video-background-holder vh-100">
+    <section id="copterpix-pro-hero" class="video-background-holder vh-lg-100">
         <div class="video-background-overlay"></div>
 <!--
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -104,7 +104,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="negative-section-lg-space mb-5">
+    <section class="negative-section-lg-space mb-5" style="overflow: hidden">
         <div class="container-fluid g-0">
             <div class="row">
                 <div class="col-lg-2"></div>

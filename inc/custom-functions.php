@@ -8,7 +8,11 @@ if (function_exists('acf_add_options_page')) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Common Product Data',
+		'menu_title'	=> 'Product-Data',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Header Settings',
 		'menu_title'	=> 'Header',
@@ -25,6 +29,7 @@ if (function_exists('acf_add_options_page')) {
 		'menu_title'	=> 'Footer',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+    
 }
 
 

@@ -115,7 +115,7 @@ $terms = get_categories(
         </div>
         
     </section>
-    <section class="section-lg-space">
+    <section class="section-lg-space" style="overflow: hidden">
         <?php if (have_rows('examples')) { ?>
         <div class="examples-slider">
             <?php while (have_rows('examples')) : the_row() ?>
@@ -162,16 +162,15 @@ $terms = get_categories(
     </section>
     <?php } ?>
     
-        
-<!--    <?php get_template_part('/template-parts/copterpix-advantages')  ?>-->
-    
     <section id="rounded-advantages" class="section-lg-space">
         <div class="cp-bg">        
-            <div class="container section-lg-padding">
-                <div class="row">
-            <h2 class="text-center section-title-center"><?php echo get_field('copterpix_advantages_title', 'options') ?></h2>
-            <h5 class="text-center"><?php echo get_field('copterpix_advantages_subtitle', 'options') ?></h5>
-        </div>
+            <div class="px-3 px-lg-0">
+                <div class="container section-lg-padding">
+                    <div class="row">
+                        <h2 class="text-center section-title-center"><?php echo get_field('copterpix_advantages_title', 'options') ?></h2>
+                        <h5 class="text-center"><?php echo get_field('copterpix_advantages_subtitle', 'options') ?></h5>
+                    </div>
+                
         <?php
         if (have_rows('copterpix_advantages_cards', 'options')): ?>
             <div class="row py-lg-5 g-4"> 
@@ -197,6 +196,7 @@ $terms = get_categories(
                     </div>    
                 </div>   
                     <?php endwhile; ?>
+                </div>
             </div>
             <?php endif ?>
             </div>

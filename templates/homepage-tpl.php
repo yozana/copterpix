@@ -154,7 +154,7 @@ get_header();
                     <?php endif ?>
             </div>            
         </div> <!-- cp-bg -->
-            <div class="cp-solutions-intro">
+            <div class="cp-solutions-intro" style="overflow: hidden">
                 <div class="container-fluid g-0">
                     <div class="row">
                         <div class="col-lg-2"></div>
