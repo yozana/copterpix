@@ -80,11 +80,8 @@ get_header();
     <section class="section-lg-space">
         <div class="cp-bg">
             <div class="container section-lg-padding">
-                <div class="row">
-                    <h2 class="text-center section-title-center"><?php echo get_field('drone_in_a_box_solution_title') ?></h2>                    
-                </div>
-                <?php if (have_rows('drone_in_a_box_cards')): ?>
-                <div class="row py-lg-5 p-3 g-4">
+                <h2 class="text-center section-title-center"><?php echo get_field('drone_in_a_box_solution_title') ?></h2>           <?php if (have_rows('drone_in_a_box_cards')): ?>
+                <div class="row py-lg-5 p-3 g-4 mx-0 mx-lg-0">
                     <?php    
                     while( have_rows('drone_in_a_box_cards')) : the_row(); ?> 
                     <div class="col-lg-4 col-sm-12">

@@ -61,7 +61,7 @@ get_header();
         <div class="cp-bg">        
             <div class="container section-lg-padding">
                 <h2 class="text-center section-title-center mb-lg-5"><?php echo get_field('copterpix_edge_title') ?></h2>
-                <div class="row p-5 p-lg-0 g-5 px-xl-3 g-lg-0">
+                <div class="row p-5 p-lg-0 g-5 px-xl-3 g-lg-0 m-0">
                     <div class="col-lg-3 col-md-12">
                         <div class="mx-3 px-3-sm px-0-lg d-flex h-75">                            
                             <?php echo get_field('left_image_text') ?>
@@ -103,7 +103,7 @@ get_header();
         <div class="container dark-container rounded-50 section-lg-padding position-relative" style="overflow: hidden">
             <div class="open-source-decoration"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/open-source-element.png" alt="decoration" /></div>
             <div class="row text-white" style="max-width: 700px; margin: auto;">
-                <div class="ps-5">
+                <div class="col ps-5">
                     <h2 class="vertical-title-decoration"><?php echo get_field('open_source_title') ?></h2>            
                     <p class="m-atuo" style="max-width: 1000px;"><?php echo get_field('open_source_description') ?></p>
                 </div>
@@ -111,12 +111,12 @@ get_header();
         </div>
     </section>
     <section id="CPX" class="section-lg-space" style="overflow: hidden">
-        <div class="container section-lg-padding">
-            <div class="row">
+        <div class="container section-lg-padding">            
+            <div class="col">
                 <h2 class="text-center section-title-center"><?php echo get_field('cpx_mission_title') ?></h2>
                 <p class="text-center subtitle"><?php echo get_field('cpx_mission_description') ?></p>
-            </div>
-            <div class="row p-5 p-lg-0 g-5 g-lg-0 section-lg-padding my-lg-5">
+            </div>            
+            <div class="row p-5 p-lg-0 g-5 g-lg-0 section-lg-padding my-lg-5 m-0">
                 <div class="col-lg-3 col-md-12">
                     <div class="mx-3 px-3-sm px-0-lg d-flex h-75">
                         <?php echo get_field('cpx_left_image_text') ?>
@@ -135,17 +135,17 @@ get_header();
     </section>
     <section id="open-framework" class="section-lg-space">
         <div class="cp-bg">
-            <div class="container section-lg-padding">
-                <div class="row">
+            <div class="container section-lg-padding px-2 px-lg-0">                
+                <div class="col">
                     <h2 class="text-center"><?php echo get_field('cpx_open_framework_title') ?></h2>
-                </div>
+                </div>                
                 <?php            
                 if (have_rows('cpx_capabilities')): ?>
-                <div class="row my-lg-5">
+                <div class="row my-lg-5 mx-0">
                     <?php 
                     while (have_rows('cpx_capabilities')) : the_row(); ?>
                     <div class="col-md-12 col-lg-3 cap-item">
-                        <div class="cap-icon">
+                        <div class="cap-icon ms-2 ms-lg-0">
                             <img src="<?php echo get_sub_field('capability_icon') ?>" alt="<?php echo get_sub_field('capability_name') ?>" />
                             <h5 class="mt-4 fw-bolder"><?php echo get_sub_field('capability_name') ?></h5>
                             <p class="mt-2 subtitle"><?php echo get_sub_field('capability_description') ?></p>
@@ -160,10 +160,14 @@ get_header();
     
     <section id="integrations" class="section-lg-padding">        
         <div class="container">
-            <h2 class="text-center section-title-center">Plug&Play - 3rd Party Integration</h2>
-            <div class="my-5">
-                <img class="img-fluid my-3 d-none d-md-block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logos_desktop.jpg" /> <!-- DESKTOP -->
-                <img class="img-fluid my-3 d-md-none " src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logos_mobile.jpg" /> <!-- Mobile -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center section-title-center">Plug&Play - 3rd Party Integration</h2>
+                    <div class="my-5">
+                        <img class="img-fluid my-3 d-none d-md-block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logos_desktop.jpg" /> <!-- DESKTOP -->
+                        <img class="img-fluid my-3 d-md-none " src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logos_mobile.jpg" /> <!-- Mobile -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>

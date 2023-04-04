@@ -78,12 +78,9 @@ $product_list = get_posts( $args );
     
     <section id="product-data" class="product-data-negative-section-lg-space d-flex justify-content-end">
         <div class="cp-bg-right double-lg-padding-top">
-            <div class="container section-lg-padding" style="overflow: hidden">
-                <div class="row">
-                    <div class="text-center table-data-img">
-                        <img src="<?php the_field('product_table') ?>" alt="product data" />
-                    </div>
-                    
+            <div class="container section-lg-padding">                
+                <div class="text-center table-data-img" >
+                    <img src="<?php the_field('product_table') ?>" alt="product data" />
                 </div>
             </div>
         </div>
@@ -92,7 +89,7 @@ $product_list = get_posts( $args );
     <section id="cameras" class="section-lg-space">
         <div class="cp-bg" style="background: #111111">
             <div class="container section-lg-padding">
-                <div class="row">
+                <div>
                     <h2 class="text-white text-center section-title-center"><?php the_field('cameras_title', 'options') ?></h2>
                     <p class="subtitle text-center text-white"><?php the_field('camera_subtitle', 'options') ?></p>
                 </div>

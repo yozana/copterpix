@@ -33,38 +33,42 @@ get_header();
             <div class="show_more text-center"><a href="#clients"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/circle_arrow_down.svg"  alt="show more" /></a></div>
         </div>
     </section>
-    <section class="section-lg-space">
-        <div class="container" id="clients">
-            <div class="row">                
-                <h2 class="text-center"><?php echo get_field('trusting_us_title') ?></h2>                                    
-            </div>
-            <div class="row g-4 my-5">                        
-                <?php if (have_rows('clients_logos')) {
-                    while( have_rows('clients_logos')) : the_row(); ?>
-                        <div class="col-6 col-sm-3 col-lg-4"><img src="<?php echo get_sub_field('logo') ?>" /></div>                                
-                    <?php endwhile;}  ?>            
-            </div>
-            
-        </div>
-    </section>
-    <section class="clients-section section-lg-space">
-        <div class="container section-lg-padding ">
+    
+    <section id="clients-by-industries" class="section-lg-space">
+        <?php 
+        while (have_rows('clients_section')) : the_row(); ?>
+        <div class="container section-lg-space" >
             <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-12">
-                    <div class="img-container position-relative" style="max-width:566px;">
-                        <img class="clients-contact" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Clients_contact-banner.jpg" alt="clients contact background" /> 
-
+                <div class="col">
+                    <div class="logos-container p-5">
+                        <h2><?php the_sub_field('section_title') ?><span class="subtitle ms-2"><?php echo the_sub_field('section_subtitle') ?></span></h2>
+                        <hr style="border-top: 4px solid #DDA000; opacity: 1" />
+                        <div class="d-flex justifiy-content-between my-5 flex-wrap">
+                            <?php while (have_rows('logos')) : the_row() ?>
+                            <div class="logo-item px-3"><img src="<?php the_sub_field('logo') ?>" /></div>
+                            <?php endwhile; ?>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-7 col-sm-12 clients-nagative-margin">
+            </div>
+        </div>
+        <?php endwhile ?>
+    </section>
+    
+    
+    <section class="clients-section section-lg-space">
+        <div class="container section-lg-padding " style="max-width: 780px;">
+            <div class="row position-relative">                                
+                <div class="col">
                     <div class="contact section-lg-space">
-                        <div class="section-lg-padding ">
-                            <div class="ms-4">
+                        <div class="section-lg-padding">
+                            <div class="client-contact-content">
                                 <h4><?php echo get_field('clients_contact_box') ?></h4>
                                 <a href="<?php echo get_field('contact_button') ?>" class="btn btn-primary text-white my-4">Contact Us</a>
                             </div>
                         </div>
-                    </div>
+                    </div>   
+                    <img class="clients-icon-decoration" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/copterpix_large_icon.svg" alt="decoration" />
                 </div>
             </div>
             

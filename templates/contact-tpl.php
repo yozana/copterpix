@@ -58,7 +58,7 @@ get_header();
     </section>
     <section class="section-lg-space mb-0">
         <div class="container-fluid">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1699.0540612601733!2d34.54199597972781!3d31.603496955546866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150283696cf7bc4f%3A0xbee2add99c5cd2cf!2sCOPTERPIX%20PRO!5e0!3m2!1siw!2sil!4v1670508089905!5m2!1siw!2sil" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.96399358081!2d34.553588570075476!3d31.634836221621818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029dfcb4db62dd%3A0xb70a34839a124a67!2z16fXldek15jXqNek15nXp9eh!5e0!3m2!1siw!2sil!4v1680587295255!5m2!1siw!2sil" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 </main><!-- #main -->
